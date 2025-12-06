@@ -1,0 +1,324 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y colores */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: #e8f5e9;
+}
+
+/* Imágenes */
+.imagenes {
+    padding: 2rem;
+}
+
+.imagenes h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.imagenes .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 200px;        /* altura fija para uniformidad */
+    object-fit: cover;    /* recorta manteniendo proporción */
+    border-radius: 8px;
+    display: block;
+}
+
+/* Video */
+.video {
+    text-align: center;
+    padding: 2rem;
+}
+
+video {
+    max-width: 100%;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Hipervínculo externo */
+.externo {
+    text-align: center;
+    padding: 1rem;
+}
+
+.externo a {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Servicios */
+.servicios {
+    padding: 2rem;
+}
+
+.servicios .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.servicios .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.servicios .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.servicios img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.servicios h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.servicios p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Nuestro Equipo */
+.equipo {
+    padding: 2rem;
+}
+
+.equipo .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.equipo .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.equipo .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.equipo img {
+    width: 100%;
+    height: 220px;       /* altura fija para uniformidad */
+    object-fit: cover;   /* recorta manteniendo proporción */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.equipo h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.equipo p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Galería */
+.galeria {
+    padding: 2rem;
+}
+
+.galeria .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.galeria img {
+    width: 100%;
+    height: 200px;       /* altura fija para uniformidad */
+    object-fit: cover;   /* recorta manteniendo proporción */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contacto */
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contacto .info, 
+.contacto .formulario {
+    flex: 1 1 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.contacto h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto input, 
+.contacto textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contacto button {
+    background: #4CAF50;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contacto button:hover {
+    background: #45a049;
+}
+
+/* Mapa */
+.mapa {
+    padding: 2rem;
+    text-align: center;
+}
+
+.map-container {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
